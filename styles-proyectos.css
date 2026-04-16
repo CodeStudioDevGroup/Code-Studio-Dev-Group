@@ -38,7 +38,6 @@
     z-index: 1;
 }
 
-/* TITULO */
 .conversion-title {
     color: var(--green);
     text-align: center;
@@ -64,6 +63,7 @@
 /* ========================= */
 
 .project-card {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -74,6 +74,7 @@
     border: 1px solid rgba(0,255,0,0.15);
     transition: 0.3s;
     gap: 10px;
+    overflow: hidden;
 }
 
 .project-card:hover {
@@ -88,7 +89,6 @@
     margin-bottom: 10px;
 }
 
-/* TEXTO NEON */
 .project-header h3,
 .tag {
     color: var(--green);
@@ -97,7 +97,6 @@
         0 0 12px rgba(0,255,0,0.3);
 }
 
-/* TEXTO */
 .project-card p {
     margin-top: 6px;
     line-height: 1.4;
@@ -114,6 +113,79 @@
     border-radius: 12px;
     margin: 15px 0;
     background: #000;
+    transition: 0.3s;
+}
+
+/* ========================= */
+/* 🔞 BLOQUEO +18 PRO */
+/* ========================= */
+
+/* Estado bloqueado */
+.project-card.adult .project-preview {
+    filter: blur(10px) brightness(0.4);
+    pointer-events: none;
+}
+
+/* Overlay */
+.adult-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0,0,0,0.75);
+    backdrop-filter: blur(6px);
+
+    text-align: center;
+    padding: 20px;
+    border-radius: 14px;
+
+    z-index: 5;
+}
+
+.adult-overlay h4 {
+    color: #ff4d4d;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.adult-overlay p {
+    font-size: 0.9rem;
+    color: #ddd;
+    margin-bottom: 15px;
+}
+
+/* Botón desbloqueo */
+.unlock-btn {
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: 1px solid var(--green);
+    background: transparent;
+    color: var(--green);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.unlock-btn:hover {
+    background: var(--green);
+    color: black;
+    box-shadow: 0 0 12px rgba(0,255,0,0.6);
+}
+
+/* Estado desbloqueado */
+.project-card.unlocked .project-preview {
+    filter: none;
+    pointer-events: auto;
+}
+
+.project-card.unlocked .adult-overlay {
+    display: none;
 }
 
 /* ========================= */
@@ -141,7 +213,7 @@
 }
 
 /* ========================= */
-/* 🔥 CTA TARJETA PRO */
+/* CTA */
 /* ========================= */
 
 .cta-section {
@@ -162,10 +234,6 @@
     box-shadow: 0 0 30px rgba(0,255,0,0.08);
 }
 
-.cta-box .conversion-title {
-    margin-bottom: 15px;
-}
-
 .conversion-subtitle {
     font-size: 1.4rem;
     line-height: 1.6;
@@ -173,40 +241,7 @@
 }
 
 /* ========================= */
-/* 🔥 NAV NEON (FIX FINAL) */
-/* ========================= */
-
-.nav-desktop a {
-    color: var(--green);
-    text-decoration: none;
-    text-shadow: 0 0 6px rgba(0,255,0,0.6);
-    transition: 0.3s;
-}
-
-/* Hover */
-.nav-desktop a:hover {
-    color: #00ffcc;
-    text-shadow:
-        0 0 8px rgba(0,255,0,0.9),
-        0 0 15px rgba(0,255,0,0.6);
-}
-
-/* Activo */
-.nav-desktop a.active {
-    color: #00ffcc;
-    text-shadow:
-        0 0 8px rgba(0,255,0,0.9),
-        0 0 15px rgba(0,255,0,0.6);
-}
-
-/* Línea inferior */
-.nav-desktop a::after {
-    background: var(--green);
-    box-shadow: 0 0 8px rgba(0,255,0,0.8);
-}
-
-/* ========================= */
-/* 🔥 RESPONSIVE COMPLETO */
+/* RESPONSIVE */
 /* ========================= */
 
 @media (max-width: 768px) {
@@ -216,69 +251,27 @@
         height: auto;
     }
 
-    .hero-content {
-        padding-top: 10px;
-    }
-
     .conversion {
         padding: 70px 15px;
     }
 
-    .conversion-title {
-        font-size: 1.6rem;
-        margin-bottom: 30px;
-    }
-
     .projects-grid {
         grid-template-columns: 1fr;
-        gap: 25px;
-    }
-
-    .project-card {
-        padding: 18px;
-        gap: 12px;
-    }
-
-    .project-header {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    .project-header h3 {
-        font-size: 1.2rem;
-    }
-
-    .tag {
-        font-size: 0.75rem;
     }
 
     .project-preview {
         height: 220px;
     }
 
-    .project-card p {
-        font-size: 0.9rem;
+    .adult-overlay {
+        padding: 15px;
     }
 
-    .project-card .btn {
-        align-self: center;
-        padding: 12px 20px;
-        font-size: 0.9rem;
+    .adult-overlay h4 {
+        font-size: 1.1rem;
     }
 
-    .cta-section {
-        padding: 80px 20px 140px;
-    }
-
-    .cta-box {
-        padding: 25px 20px;
-    }
-
-    .cta-box .conversion-title {
-        font-size: 1.7rem;
-    }
-
-    .conversion-subtitle {
-        font-size: 1.2rem;
+    .adult-overlay p {
+        font-size: 0.8rem;
     }
 }

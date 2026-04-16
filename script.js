@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // =========================
-    // TYPEWRITER (🔥 FIX SIN ROMPER JS)
+    // TYPEWRITER
     // =========================
     const phrases = [
         "Expertos en Análisis de Software",
@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // =========================
-    // 🔥 FORMULARIO (LOADING + ÉXITO)
+    // FORMULARIO
     // =========================
     const form = document.querySelector(".contact-form");
     const submitBtn = document.getElementById("submitBtn");
@@ -117,11 +117,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         form.addEventListener("submit", function () {
 
-            // ACTIVAR LOADING
             submitBtn.classList.add("loading");
             submitBtn.textContent = "Enviando...";
 
-            // SIMULACIÓN VISUAL (Formspree redirige igual)
             setTimeout(() => {
                 submitBtn.classList.remove("loading");
                 submitBtn.textContent = "Enviar solicitud";
@@ -133,5 +131,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
         });
     }
+
+    // =========================
+    // 🔒 PROYECTO CONFIDENCIAL (NUEVO)
+    // =========================
+    const lockedCards = document.querySelectorAll(".project-locked-card");
+
+    lockedCards.forEach(card => {
+        const button = card.querySelector(".btn");
+
+        if (button) {
+            button.addEventListener("click", () => {
+
+                // 🔥 Tracking básico (puedes usarlo luego)
+                console.log("Usuario solicitó acceso a proyecto confidencial");
+
+                // 💡 Aquí puedes luego:
+                // - Abrir modal
+                // - Guardar en localStorage
+                // - Integrar CRM
+            });
+        }
+    });
 
 });
