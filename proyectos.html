@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos | Code Studio Dev Group</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-proyectos.css">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- 🔥 VIDEO GLOBAL -->
+<div class="video-background">
+    <video autoplay muted loop playsinline preload="metadata">
+        <source src="videos/159052-818026310_medium.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay-global"></div>
+</div>
+
+<!-- ========================= -->
+<!-- HEADER -->
+<!-- ========================= -->
+<header class="main-header">
+    <div class="container header-container">
+
+        <!-- LOGO -->
+        <div class="logo-container">
+            <img src="logos/logo_matrix_sinfondo.png" class="site-logo" alt="Logo Code Studio">
+        </div>
+
+        <!-- NAV DESKTOP -->
+        <nav class="nav-desktop">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="proyectos.html" class="active">Proyectos</a></li>
+                <li><a href="quienes.html">Quiénes somos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <!-- 🔥 BOTÓN HAMBURGUESA (BIEN UBICADO) -->
+        <button class="menu-toggle" id="openMenu" aria-label="Abrir menú">
+            <i class="fas fa-bars"></i>
+        </button>
+
+    </div>
+</header>
+
+<!-- ========================= -->
+<!-- MENÚ MÓVIL -->
+<!-- ========================= -->
+<div class="mobile-overlay" id="mobileOverlay">
+    <button class="close-menu" id="closeMenu" aria-label="Cerrar menú">&times;</button>
+
+    <nav class="nav-mobile">
+        <a href="index.html">Inicio</a>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="quienes.html">Quiénes somos</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+</div>
+
+<!-- ========================= -->
+<!-- HERO -->
+<!-- ========================= -->
+<section class="hero hero-small">
+
+    <div class="container hero-content">
+
+        <h1 class="hero-title">
+            Proyectos que <span>generan resultados</span>
+        </h1>
+
+        <p class="hero-description">
+            Landing pages, e-commerce y sistemas diseñados para convertir.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- PROYECTOS -->
+<!-- ========================= -->
+<section class="conversion">
+
+    <div class="container">
+
+        <h2 class="conversion-title">Proyectos</h2>
+
+        <div class="projects-grid">
+
+            <!-- PROYECTO 1 -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>Sexy Coffee Tour</h3>
+                    <span class="tag">Landing Experience</span>
+                </div>
+
+                <iframe src="https://codestudiodevgroup.github.io/Sexy-Coffe-Tour/" class="project-preview" loading="lazy"></iframe>
+
+                <p><strong>Enfoque:</strong> Contenido +18 + marketing visual</p>
+                <p><strong>Resultado:</strong> Mayor atracción de clientes</p>
+
+                <a href="https://codestudiodevgroup.github.io/Sexy-Coffe-Tour/" target="_blank" class="btn btn-main">
+                    Ver proyecto en vivo
+                </a>
+            </div>
+
+            <!-- PROYECTO 2 -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>Strategikal</h3>
+                    <span class="tag">Web Corporativa</span>
+                </div>
+
+                <iframe src="https://codestudiodevgroup.github.io/Strategikal.github.io/" class="project-preview" loading="lazy"></iframe>
+
+                <p><strong>Enfoque:</strong> Página corporativa estratégica</p>
+                <p><strong>Resultado:</strong> Mejor posicionamiento digital</p>
+
+                <a href="https://codestudiodevgroup.github.io/Strategikal.github.io/" target="_blank" class="btn btn-main">
+                    Ver proyecto en vivo
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- CTA FINAL -->
+<!-- ========================= -->
+<section class="cta-section">
+
+    <div class="container">
+
+        <div class="cta-box">
+
+            <h2 class="conversion-title">¿Quieres un proyecto así?</h2>
+
+            <p class="conversion-subtitle">
+                Diseñamos experiencias digitales estratégicas que impulsan resultados reales para tu negocio.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- WHATSAPP -->
+<!-- ========================= -->
+<a href="https://wa.me/573246814358" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<!-- JS (🔥 ESTE TE FALTABA) -->
+<script src="script.js" defer></script>
+
+</body>
+</html>

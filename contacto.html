@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Code Studio Dev Group</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-contacto.css">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- ========================= -->
+<!-- HEADER -->
+<!-- ========================= -->
+<header class="main-header">
+    <div class="container header-container">
+        
+        <div class="logo-container">
+            <img src="logos/logo_matrix_sinfondo.png" class="site-logo" alt="Code Studio Dev Group">
+        </div>
+
+        <!-- NAV DESKTOP -->
+        <nav class="nav-desktop">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="quienes.html">Quiénes somos</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <!-- BOTÓN HAMBURGUESA -->
+        <button class="menu-toggle" id="openMenu" aria-label="Abrir menú">
+            <i class="fas fa-bars"></i>
+        </button>
+
+    </div>
+</header>
+
+<!-- ========================= -->
+<!-- MENÚ MÓVIL -->
+<!-- ========================= -->
+<div class="mobile-overlay" id="mobileOverlay">
+    <button class="close-menu" id="closeMenu">&times;</button>
+
+    <nav class="nav-mobile">
+        <a href="index.html">Inicio</a>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="quienes.html">Quiénes somos</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+</div>
+
+<!-- ========================= -->
+<!-- HERO -->
+<!-- ========================= -->
+<section class="hero hero-small">
+
+    <div class="video-container">
+        <video autoplay loop muted playsinline class="video-bg">
+            <source src="videos/270341_medium.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+    </div>
+
+    <div class="container hero-content">
+
+        <h1 class="hero-title">
+            Hablemos de tu <span>proyecto</span>
+        </h1>
+
+        <p class="hero-description">
+            Cuéntanos qué necesitas y te ayudamos a construir una solución digital estratégica.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- FORMULARIO -->
+<!-- ========================= -->
+<section class="contact-section">
+
+    <div class="container">
+
+        <div class="contact-wrapper">
+
+            <!-- FORM -->
+            <div class="contact-form-box">
+
+                <h2 class="contact-title">Solicita una asesoría</h2>
+
+                <form action="https://formspree.io/f/xpqkarey" method="POST" class="contact-form">
+
+                    <div class="form-group">
+                        <label>Nombre</label>
+                        <input type="text" name="nombre" placeholder="Tu nombre completo" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Correo electrónico</label>
+                        <input type="email" name="email" placeholder="tu@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Tipo de proyecto</label>
+                        <select name="tipo">
+                            <option>Landing Page</option>
+                            <option>Página Web Corporativa</option>
+                            <option>Tienda Online</option>
+                            <option>Sistema a medida</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Mensaje</label>
+                        <textarea name="mensaje" rows="5" placeholder="Cuéntanos sobre tu proyecto..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-main">
+                        Enviar solicitud
+                    </button>
+
+                </form>
+
+            </div>
+
+            <!-- INFO LATERAL -->
+            <div class="contact-info-box">
+
+                <h3>Contáctanos directamente</h3>
+
+                <p>
+                    Si prefieres una respuesta más rápida, puedes escribirnos directamente por WhatsApp.
+                </p>
+
+                <a href="https://wa.me/573246814358?text=Hola,%20quiero%20información%20sobre%20un%20proyecto"
+                   class="btn btn-alt" target="_blank">
+                   💬 Hablar por WhatsApp
+                </a>
+
+                <div class="contact-extra">
+                    <p><i class="fas fa-envelope"></i> codestudio.devgroup@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +57 324 681 4358</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- WHATSAPP FLOAT -->
+<!-- ========================= -->
+<a href="https://wa.me/573246814358" 
+   class="whatsapp-float" 
+   target="_blank" 
+   aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<!-- JS -->
+<script src="script.js" defer></script>
+
+</body>
+</html>

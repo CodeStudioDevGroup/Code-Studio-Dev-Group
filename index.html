@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Studio Dev Group git| Expertos en Software</title>
+    
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="main-header">
+    <div class="container header-container">
+        
+        <div class="logo-container">
+            <img src="logos/logo_matrix_sinfondo.png" class="site-logo" alt="Code Studio Dev Group">
+        </div>
+
+        <!-- NAV DESKTOP -->
+        <nav class="nav-desktop">
+            <ul>
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="quienes.html">Quiénes somos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <!-- BOTÓN HAMBURGUESA (solo se mostrará en móvil con CSS) -->
+        <button class="menu-toggle" id="openMenu" aria-label="Abrir menú">
+            <i class="fas fa-bars"></i>
+        </button>
+
+    </div>
+</header>
+
+<!-- MENÚ MÓVIL -->
+<div class="mobile-overlay" id="mobileOverlay">
+    <button class="close-menu" id="closeMenu" aria-label="Cerrar menú">&times;</button>
+
+    <nav class="nav-mobile">
+        <a href="index.html">Inicio</a>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="quienes.html">Quiénes</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+</div>
+
+<!-- HERO -->
+<section id="inicio" class="hero">
+
+    <div class="video-container">
+        <video autoplay loop muted playsinline class="video-bg">
+            <source src="videos/270341_medium.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+    </div>
+
+    <div class="container hero-content">
+
+        <div class="hero-brand">
+
+            <img src="logos/logo_matrix_sinfondo.png" class="hero-logo" alt="Code Studio Dev Group">
+
+            <h1 class="hero-title">
+                Code Studio Dev Group
+            </h1>
+
+            <h2 class="hero-subtitle highlight-text">
+                <span id="typing-text"></span>
+            </h2>
+
+        </div>
+
+        <p class="hero-description highlight-text-soft">
+            Impulsamos tu negocio con tecnología de alto rendimiento, diseño profesional 
+            y soluciones digitales que generan resultados reales.
+        </p>
+
+        <!-- BOTONES -->
+        <div class="actions">
+            <a href="https://wa.me/573246814358?text=Hola,%20quiero%20cotizar%20un%20proyecto" 
+               class="btn btn-main" target="_blank">
+               💬 Cotizar Proyecto
+            </a>
+
+            <a href="proyectos.html" class="btn btn-alt">
+                Ver Proyectos
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/573246814358?text=Hola,%20estoy%20interesado%20en%20sus%20servicios" 
+   class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<!-- JS -->
+<script src="script.js" defer></script>
+
+</body>
+</html>
